@@ -1,0 +1,32 @@
+
+/* Adjustments for tablets (min-width: 481px) and smaller */
+
+body {
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+}
+
+header h1 {
+    height: auto; 
+}
+
+nav {
+    width: 100%; 
+}
+
+.menu-bar ul li {
+    padding: 10px; 
+    width: 80px; 
+    margin: 10px; 
+}
+
+.menu-bar ul li a {
+    font-size: 14px; 
+}
+
+ul li i {
+    font-size: 14px; 
+}
+
+div.a {
+    right: 50px; 
+}

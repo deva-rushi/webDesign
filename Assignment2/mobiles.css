@@ -1,0 +1,32 @@
+
+/* Adjustments for mobiles (max-width: 480px) */
+
+body {
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+}
+
+header h1 {
+    height: auto; /* Adjust as needed for mobiles */
+}
+
+footer h2 {
+    left: 40%; 
+}
+
+.menu-bar ul li {
+    padding: 8px; 
+    width: 60px; 
+    margin: 8px; 
+}
+
+.menu-bar ul li a {
+    font-size: 12px; 
+}
+
+ul li i {
+    font-size: 12px; 
+}
+
+div.a {
+    right: 30px; 
+}
