@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FEEDBACK</title>
+  <link rel="stylesheet" href="Form.css">
+  <script src="Form.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <main>
+        <h2>FEEDBACK FORM FOR CUSTOMERS</h2>
+        <h3>Love or Hate Something Here?? Feel Free to Let us know!!</h3>
+        Note : Fields with an asterisk (*) are required!
+        <br/><br />
+
+        
+        <form  novalidate name="feedback" id = "feedback">
+          <div class="Error" id="errorMsgManditory" style="display: none; color: rgba(255, 0, 0, 0.746); border-style: solid">
+            Fields with an asterisk (*) are required!
+          </div>
+          <!-- title details -->
+          <label>Title*:</label>
+          <input type="radio" name="title" id="TitleRadio" value="Miss." required="required"/>Miss.
+          <input type="radio" name="title" id="TitleRadio" value="Mr." required="required" />Mr.
+          <input type="radio" name="title" id="TitleRadio" value="Mrs." required="required" />Mrs. 
+          <br /><br />
+          
+          <!-- first name attribute -->
+          <label for="firstName">First Name*:</label>
+          <input type="text"  name="firstName" id="firstName" placeholder="First Name" required="required" 
+          onchange="validateInputs(this, 4, 'FName')"
+          />
+          <div class="Error" id="errorMsgFName" style="display: none; color: red">
+           Please Enter the valid First Name
+          </div>
+          <br /><br />
+
+          <!-- lastname attribute -->
+          <label for="lastName">Last Name*:</label>
+          <input type="text" name="lastName"  id="lastName" placeholder="Last Name" required="required" 
+          onchange="validateInputs(this, 5, 'LName')"
+          />
+          <div class="Error" id="errorMsgLName" style="display: none; color: red">
+            Please Enter the valid Last Name
+          </div>
+          <br /><br />
+           
+          <!-- enter emailid attribute-->
+          <label for="emailId">Email Id*:</label>
+          <input type="text" required="required" name="emailId" id="emailId" placeholder="lastname@northeastern.edu"
+          onchange="validateInputs(this, 1, 'EmailId')"
+          />
+          <div class="Error" id="errorMsgEmailId" style="display: none; color: red">
+            Wrong or Invalid email address. Please correct and try again.(@northeastern.edu).
+          </div>
+          <br /><br />
+          
+          <!-- enter phonenumber attribute-->
+          <label for="phoneNumber">Phone Number*:</label>
+          <input type="text" name="phoneNumber" id="phoneNumber" placeholder="xxx-xxx-xxxx" required="required"
+          onchange="validateInputs(this, 2, 'PhoneNo')"
+          />
+          <div class="Error" id="errorMsgPhoneNo" style="display: none; color: red">
+            Incorrect phone number (XXX-XXX-XXXX).
+          </div>   
+          <br /><br />
+
+          <!-- enter fulladdress attribute-->
+          <label for="streetAddress1">Street Address 1*:</label>
+          <input type="text" name="streetAddress1" id="streetAddress1" required="required" placeholder="Address 1" 
+          onchange="validateInputs(this, 6, 'Address')"
+          />
+          <div class="Error" id="errorMsgAddress" style="display: none; color: red">
+            Please enter a correct Address.
+          </div>
+          <br /><br />
+
+           <!-- optional address attribute-->
+          <label for="streetAddress2">Street Address 2:</label>
+          <input type="text" name="streetAddress2" id="streetAddress2" placeholder="Address 2" />
+          <br /><br />
+
+          <!-- city attribute-->
+          <label for="city">City*:</label>
+          <input type="text" name="city" id="city" placeholder="Your City" required="required"
+          onchange="validateInputs(this, 7, 'City')"
+          />
+          <div class="Error" id="errorMsgCity" style="display: none; color: red">
+           Please enter a valid City Name.
+          </div>
+          <br /><br />
+
+          <!-- state attribute-->
+          <label for="state">State*:</label>
+          <input type="text" name="state" id="state" placeholder="Your State" required="required" 
+          onchange="validateInputs(this, 8, 'State')"
+          />
+          <div class="Error" id="errorMsgState" style="display: none; color: red">
+            Please enter State Name.
+          </div>
+          <br /><br />
+
+          <!-- zipcode attribute-->
+          <label for="zipcode">ZipCode*:</label>
+          <input type="text" name="zipcode" id="zipcode" placeholder="xxxxx" required="required" 
+          onchange="validateInputs(this, 3, 'Zipcode')"
+          />
+          <div class="Error" id="errorMsgZipcode" style="display: none; color: red">
+           Please enter valid ZipCode.
+          </div>
+          <br /><br />
+
+          <!-- Hear from attribute-->
+          <label for="HearFrom">How did you hear*:</label>
+          <input type="checkbox" id = "mediaFeedback" name="source" value="Facebook" /> Facebook
+          <input type="checkbox" id = "mediaFeedback" name="source" value="Google" /> Google
+          <input type="checkbox" id = "mediaFeedback" name="source" value="Yelp" /> Yelp <br /><br />
+
+          <!--Dropdown menu attribute-->
+          <label for="Mocha">Please select your drink:</label>
+          <select id = "dropdown" onchange="showCheckbox(this)" required="True">
+            <option value="NA">None</option>
+            <option value="Cappuccino">Cappuccino </option>
+            <option value="Macchiato">Macchiato</option>
+            <option value="Ristretto">Ristretto</option>
+            <option value="Americano">Americano</option>
+            <option value="Mocha">Mocha</option>
+            <br /><br/><br/><br/>
+          </select>
+          <br /><br />
+          <div id="Cappuccino" class="menuCheckboxes" style="display:none">
+            <input type="checkbox" value="Cappuccino" class ="checkboxAns"/>Add Cappuccino for extra-3$.
+         </div>
+          <div id="Macchiato" class="menuCheckboxes" style="display:none"> 
+            <input type="checkbox" value="Macchiato" class ="checkboxAns" />Add Macchiato for extra-0.80$.
+        </div>
+          <div id="Ristretto" class="menuCheckboxes" style="display:none"> 
+            <input type="checkbox" value="Ristretto" class ="checkboxAns" />Add Ristretto for extra-7$.
+        </div>
+          <div id="Americano" class="menuCheckboxes" style="display:none"> 
+            <input type="checkbox" value="Americano" class ="checkboxAns" />Add Americano for extra-2.5$.
+        </div>
+          <div id="Mocha" class="menuCheckboxes" style="display:none"> 
+            <input type="checkbox" value="Mocha" class ="checkboxAns" />Add Mocha for extra-2.2$.
+        </div>
+        <br/><br />
+
+        <!-- additional instructions  -->
+        <label class="NoteField" for="Note" style="display:none">Note:</label>
+        <input type="text" name="note" class="NoteField" id="note" style="display:none" placeholder="provide information here if any"  required="required"  />
+          <br/><br />
+
+          <!-- comments  -->
+          <label for="comments">Comments*:</label>
+          <textarea name="text" id="comments" placeholder="Please leave your comments" required="required" rows="5" cols="25" ></textarea>
+          <br /><br />
+          <input type="Submit" onclick="onSubmit()" />
+          <input type="Reset" id="clearID" onclick="hideonReset();"/>
+          <br /><br />
+        </form>
+      </main>
+    </div>
+<script>
+$(".checkboxAns").click(function() {
+if($(this).is(":checked")) {
+$(".NoteField").show();
+}
+else{
+$(".NoteField").hide();
+}
+});
+</script>
+
+<!-- form tb  -->
+    <form id="tableForm" style="display: none;">
+      <table >
+        <tr>
+          <td colspan="2" 
+          style="
+          border :1px solid; 
+          padding-left: 71px;
+          border-color: rgb(239, 186, 186);
+          border-radius: 8px; ">
+               Submitted Feedback</td>
+        </tr>
+        <tr>
+          <td><label for="TTitle">Title:</label></td>
+          <td><input type="text" id="TTitle" disabled></td>
+        </tr>
+
+        <tr>
+          <td><label for="TfirstName">First Name:</label></td>
+          <td><input type="text" id="TfirstName" disabled></td>
+        </tr>
+
+        <tr>
+          <td><label for="TlastName">Last Name:</label></td>
+          <td><input type="text" id="TlastName" disabled></td>
+        </tr>
+      
+        <tr>
+          <td><label for="TemailId">Email Id:</label></td>
+          <td> <input type="text" id="TemailId" disabled></td>
+        </tr>
+      
+        <tr>
+          <td><label for="TphoneNumber">Phone Number*:</label></td>
+          <td><input type="text" id="TphoneNumber" disabled></td>
+        </tr>
+      
+        <tr>
+          <td><label for="TstreetAddress1">Street Address 1:</label></td>
+          <td><input type="text" id="TstreetAddress1" disabled></td>
+        </tr>
+
+        <tr>
+          <td><label for="TstreetAddress2">Street Address 2:</label></td>
+          <td><input type="text" id="TstreetAddress2" disabled></td>
+        </tr>
+
+        <tr>
+          <td><label for="Tcity">City:</label></td>
+          <td><input type="text" id="Tcity" disabled></td>
+        </tr>
+      
+        <tr>
+          <td><label for="Tstate">State:</label></td>
+          <td><input type="text" id="Tstate" disabled></td>
+        </tr>
+      
+        <tr>
+          <td><label for="Tzipcode">ZipCode:</label></td>
+          <td><input type="text" id="Tzipcode" disabled></td>
+        </tr>
+      
+        <tr>
+          <td><label for="Thear">How did you hear about us*:</label></td>
+          <td><input type="text" id="Thear" disabled></td>
+        </tr>
+      
+        <tr>
+          <td><label for="TMocha">Selected Drink:</label></td>
+          <td><input type="text" id="TMocha" disabled></td>
+        </tr>
+      
+        <tr>
+          <td><label for="TmenuCheckboxes">Extra's</label></td>
+          <td><textarea name="text" id="TmenuCheckboxes" disabled></textarea></td>
+        </tr>
+
+        <tr>
+          <td><label for="TNote">Extra's Note:</label></td>
+          <td><textarea name="text" id = "TNote" disabled></textarea></td>
+        </tr>
+      
+      
+        <tr>
+          <td><label for="Tcomments">Comments*:</label></td>
+          <td><textarea name="text" id = "Tcomments" disabled></textarea></td>
+        </tr>
+      </table>
+    </form> 
+
+  </body>
+</html>
