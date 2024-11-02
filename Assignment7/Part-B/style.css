@@ -1,0 +1,44 @@
+#title{
+  font-size:xx-large;
+  color: black;
+  font-weight: 600;
+}
+
+#timer{
+  font-size: xx-large;
+}
+
+#start{
+  margin-left:10px;
+  margin-right: 10px;
+}
+
+#pause{
+  margin-right: 10px;
+}
+
+#reset{
+  margin-right: 10px;
+}
+
+#watch {
+  border-style: double;
+  margin-left: 10%;
+  margin-right: 45%;
+  margin-top: 10%;
+  background-color: rgba(245, 245, 220, 0.8); /* Beige with a dark shade (adjust the alpha value) */
+  padding: 20px;
+}
+
+body {
+  background-image: url('StopWatch.jpg');
+  background-color: rgba(245, 245, 220, 0.8); /* Beige with a dark shade (adjust the alpha value) */
+  background-size: 40%;
+  background-attachment: fixed;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+.center-content {
+  text-align: center;
+}

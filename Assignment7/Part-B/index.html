@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="stopwatch.js" defer></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="/Part-B/icons8-timer-64.png">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <title>StopWatch</title>
+</head>
+<body>
+    
+        <br>
+        <br>
+        <br>
+        <br>
+        <div id="watch">
+            <br>
+            <div id="title">StopWatch</div>
+            <br>
+            <!-- Date input field for current and future/past dates -->
+            <input type="date" id="date" min="1900-01-01" max="2099-12-31">
+            <br>
+            <label id="timer" style="color: black">00 : 00 : 00</label>
+            <div class="buttons">
+                <br>
+                <button type="button" id="start" class="btn btn-info">Start</button>
+                <button type="button" id="pause" class="btn btn-info">Stop</button>
+                <button type="button" id="reset" class="btn btn-info">Reset</button>
+            </div>
+            <br>
+            <br>
+        </div>
+    
+</body>
+</html>

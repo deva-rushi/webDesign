@@ -1,0 +1,99 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background-color: rgb(233, 164, 164); /* Beige with a dark shade (adjust the alpha value) */
+	background-size: 40%;
+	background-attachment: fixed;
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+.container
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 1509px;
+	background: rgb(233, 164, 164);
+	padding: 259px;
+	box-sizing: border-box;
+	border :1px solid rgba(0,0,0,.1);
+	box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+.container h1
+{
+	text-align: left;
+	margin: 0 0 90px;
+	padding: 0;
+	color: rgb(66, 95, 138);
+	letter-spacing: 2px;
+}
+.container input
+{
+	padding: 5px;
+	margin-bottom: 50px;
+	width: 85%;
+	box-sizing: border-box;
+	box-shadow: none;
+	outline: none;
+	border:none;
+	border-bottom: 2px solid #999;
+}
+.container input[type="submit"]
+{
+	border-radius: 55px;
+	font-size: 35px;
+	height: 50px;
+	cursor : pointer;
+	background: rgb(66,133,244);
+	color: rgb(35, 34, 34);
+	margin-bottom: 0;
+}
+.container input[type="submit"]:hover
+{
+	background: #9e951a;
+	color: rgb(84, 80, 80);
+}
+.container form div
+{
+	position: relative;
+}
+.container form div label
+{
+	position: absolute;
+	top: 3px;
+	pointer-events: none;
+	left: 0;
+	transition: .5s;
+}
+.container input:focus ~label,
+.container input:valid ~label
+{
+	left: 0;
+	top: -20px;
+	color: rgb(8, 20, 39);
+	font-size: 17px;
+	font-weight: bold;
+}
+.container input:focus,
+.container input:valid
+{
+	border-bottom: 2px solid rgb(9, 91, 224);
+}
+.error_form
+{
+	top: 12px;
+	color: rgb(14, 2, 2);
+    font-size: 15px;
+    font-family: Helvetica;
+}
+#container1{
+	text-align: center;
+	background-color:  rgb(233, 164, 164);
+	padding-top: 55px;
+}
+#headerText {
+	text-align: center;
+}

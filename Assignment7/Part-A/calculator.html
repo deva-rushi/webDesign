@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <meta charset="windows-1252">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h3 id="headerText"></h3>
+    </header>
+    <section>
+        <div id="container1" >
+
+        <h1>Simple Calculator</h1>
+        <label>Enter input 1 details:</label>
+        <input type="text" id="x" name="option" onblur="validateInputs(this, 1, 'in1')" />
+        <div id="errorMsgin1" style="color:red;"></div>
+
+        <br><br>
+        <label>Enter input 2 details:</label>
+        <input type="text" id="y" name="task" onblur="validateInputs(this, 2, 'in2')" />
+        <div id="errorMsgin2" style="color:red;"></div>
+
+        <br><br>
+
+        <input class="operation" type="button" value="Add">
+        <input class="operation" type="button" value="Subtract">
+        <input class="operation" type="button" value="Multiply">
+        <input class="operation" type="button" value="Divide">
+
+        <br><br>
+        <label>Result:</label>
+        <input type="text" disabled="disabled" id="result">
+      </div>
+    </section>
+   
+    <script src="script.js" defer></script>
+</body>
+
+</html>
